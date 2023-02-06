@@ -1,16 +1,16 @@
 package com.springrest.springrest.service;
 
 import com.springrest.springrest.customException.BussinessException;
-import com.springrest.springrest.dao.EmployeeDao;
+//import com.springrest.springrest.dao.EmployeeDao;
 import com.springrest.springrest.etities.EmployeeDTO;
 import com.springrest.springrest.pojo.Employee;
-import com.zaxxer.hikari.util.FastList;
-import org.junit.jupiter.api.BeforeEach;
+//import com.zaxxer.hikari.util.FastList;
+//import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
+//import org.mockito.Mockito;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.text.ParseException;
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 class EmployeeImplementsTest {
     @Mock
-    private EmployeeDao employeeDao;
+//    private EmployeeDao employeeDao;
     @InjectMocks
     private EmployeeImplements employeeImplements;
     List<EmployeeDTO> employeeDTOList;
@@ -36,7 +36,7 @@ class EmployeeImplementsTest {
     }
 
     @Test
-    void createEmployee() throws ParseException {;
+    void createEmployee() throws ParseException {
         // Mockito.doNothing(employeeDao).save();
         //Mockito.doNothing(employeeDao.save(Mockito.any()));
         Employee employee=new Employee();
@@ -59,6 +59,7 @@ class EmployeeImplementsTest {
     }
     @Test
     void createEmployeeOldCitezen() throws ParseException {
+        //adding changes
         Employee employee=new Employee();
         employee.setName("harsha");
         employee.setDate("02-03-2023");
@@ -81,7 +82,6 @@ class EmployeeImplementsTest {
     }
     @Test
     void createEmployeeException() {
-        ;
         // Mockito.doNothing(employeeDao).save();
         //Mockito.doNothing(employeeDao.save(Mockito.any()));
         Employee employee = new Employee();
